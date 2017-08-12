@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from mcard import views
 
 urlpatterns = [
-    url(r'^dashboard/', include('mcard_dashboard.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^products/$', views.product_list),
 ]
